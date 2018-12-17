@@ -1,0 +1,27 @@
+
+URGENT!
+-----------------
+1. logging funcs are ugly :(
+1. config file parser
+2. ocsp support for SSL checks
+3. test and verify tlsext domain support for SSL checks
+9. update DOCS and sample squid.conf
+
+
+NORMAL
+-----------------
+1. add input macros to helper resulting string like %URL, %PROTO, etc. (subst them in 'notes')
+1. GeoIP checker: multi-IP hosts - what to cache?; DEBUG
+2. SSL checker: add ssl_error_text='...' to resulting notes
+7. SSL checker connects to 1st resolved ip only - make it try all of them
+1. MySQL support
+
+
+LOW
+-----------------
+5. check config file lines for bad chars (url escape them?)
+
+UNCATEGORIESED
+-----------------
+1. thread safety! review code and place mutexes in critical places?
+

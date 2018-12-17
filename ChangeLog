@@ -1,0 +1,56 @@
+
+Mon Oct 10 15:12:02 EEST 2016
+ -- Abandoning this branch (though it is quite stable) and moving to 1.0.0 (trunk)
+
+Tue Oct  4 12:49:23 EEST 2016
+ -- GeoIP2 implemented (using libmaxminddb)
+
+Mon Sep 26 17:27:29 EEST 2016
+ -- Fixed file source parsing in source.c
+ -- Fixed empty lines handling in checker.c
+ -- Valgrind checks
+ -- Removed SIGSEGV handling
+ -- Added mutex in log.c to avoid logs mixing
+ -- Temporary removed support for multiline records in 'file' source
+
+Thu Sep 22 13:04:52 EEST 2016
+ -- Fixed PostgreSQL connection bugs
+ -- Added support for multiline (continuous) records in all sources
+ -- Code profiling and optimization
+
+Wed Sep 21 18:20:37 EEST 2016
+ -- Added PostgreSQL source support
+ -- Added support for multiline columns in DB related sources
+ -- Several bugfixes and code cleanups
+
+Thu Aug 18 11:20:01 EEST 2016
+ -- fixed segfault in checker.c at ...strlen(NULL)...
+
+Fri Aug  5 14:36:02 EEST 2016
+ -- added 'hostname' support for TLSEXT in ssl.c
+
+Thu Aug  4 12:43:14 EEST 2016
+ -- fixed support for 0.0.0.0/0 ip/mask notation
+
+Fri Jul 22 15:48:43 EEST 2016
+ -- fixed bug (set errno to 0) in checker.c
+ -- acl-helper.conf: fixed mistyped driver name (shell => match)
+
+Wed Mar 30 15:42:57 UTC 2016
+ -- New version started
+ -- Heavy configuration file changes: 'checker' directive mostly
+ -- Added new checker type 'dresolve'
+ -- Got rid of squid input string fields hard placing, now it is flexible
+ -- Some code cleanups and fixes
+
+Tue Mar 22 18:07:26 EET 2016
+ -- Fix for dst_ip matching
+ -- SSL cert check host connection fix
+ -- Minor typo fixes
+
+
+Thu Mar 17 15:55:42 EET 2016
+ -- initial SF release
+
+
+

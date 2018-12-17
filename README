@@ -1,0 +1,40 @@
+
+What is this?
+--------------
+
+ This is an another Squid proxy external ACL helper. It utilises new Squid
+External ACLs mechanism named 'notes'. It is threaded and very fast, also it
+is quite flexible.
+ The main reason why I wrote this is the need in modification of Squid HTTP
+reqests processing based on settings from various sources, including databases,
+files and even remote host SSL cert status.
+
+
+The helper operates in 'concurrent' mode.
+
+(more docs: TBW)
+
+
+Notes:
+----------
+
+- SSL host certificate check
+If SSL checker type called then SSL host verification will be done
+and its result will be returned as 'note' in form of 'ssl_error=XX'
+where XX is an SSL check error integer value (see openssl macros
+in /usr/include/openssl/x509_vfy.h)
+Predefined (and hardcoded for now) string 'ssl_error' can be found 
+in ./src/ssl.h file
+
+-- Other
+More on config and options - See comments in ./etc/acl-helper.conf
+More on how to install it for Squid - See squid config example in ./etc
+
+-- Useful links
+http://wiki.squid-cache.org/Features/AddonHelpers
+http://www.squid-cache.org/Doc/config/external_acl_type/
+http://wiki.squid-cache.org/KnowledgeBase/DebugSections
+http://www.squid-cache.org/Doc/config/acl/
+http://www.squid-cache.org/Doc/config/deny_info/
+
+
